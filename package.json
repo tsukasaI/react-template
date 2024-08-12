@@ -4,8 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "predev": "pnpm gen",
     "dev": "vite",
+    "prebuild": "pnpm gen",
     "build": "tsc -b && vite build",
+    "gen": "orval",
     "preview": "vite preview",
     "lint": "run-p -lc --aggregate-output 'lint:*'",
     "lint:react": "eslint . --report-unused-disable-directives --max-warnings 0",
@@ -25,12 +28,14 @@
     ]
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.51.23",
     "@tanstack/react-router": "^1.45.14",
     "axios": "^1.7.2",
     "clsx": "^2.1.1",
     "lucide-react": "^0.416.0",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "uuidv4": "^6.2.13"
   },
   "devDependencies": {
     "@eslint/js": "^9.8.0",
@@ -46,6 +51,7 @@
     "husky": "^9.1.2",
     "lint-staged": "^15.2.7",
     "npm-run-all": "^4.1.5",
+    "orval": "^7.0.1",
     "postcss": "^8.4.40",
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.5",

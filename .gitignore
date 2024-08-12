@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# orval
+src/api/endpoints/
+src/api/dto/
